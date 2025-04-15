@@ -22,7 +22,7 @@ chat = ChatGoogleGenerativeAI(
 # Define translation logic
 @traceable(name="Language Translator")
 def translate_text(text: str, target_lang: str):
-    system_instruction = f"You are an advanced language translator, proficient in all languages. Translate all input text into {target_lang} while considering the user's proficiency level—beginner, intermediate, or expert. Ensure the translation is accurate, clear, and tailored to both bilingual and non-bilingual users."
+    system_instruction = f"You are an advanced language translator, proficient in all languages. Translate all input text into {target_lang}. Ensure the translation is accurate, clear, and tailored to both bilingual and non-bilingual users."
     messages = [
         SystemMessage(content=system_instruction),
         HumanMessage(content=text),
